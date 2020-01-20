@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.mirabilis.sqlite_menuhead">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_local_grocery_store_black_72dp"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".KtApplication"
+        android:hardwareAccelerated="true">
+
+        <activity android:name=".master_kategori.KategoriEdit"
+            android:parentActivityName=".master_kategori.KategoriMain">
+        </activity>
+
+        <activity android:name=".master_barang.BarangEdit"
+            android:parentActivityName=".master_barang.BarangMain">
+        </activity>
+
+        <activity
+            android:name=".master_barang.BarangAdd"
+            android:parentActivityName=".master_barang.BarangMain"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name=".master_kategori.KategoriAdd"
+            android:parentActivityName=".master_kategori.KategoriMain">
+        </activity>
+
+        <activity android:name=".master_barang.BarangMain"
+            android:parentActivityName=".MasterMenu">
+        </activity>
+        <activity android:name=".master_kategori.KategoriMain"
+            android:parentActivityName=".MasterMenu">
+        </activity>
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+        <activity android:name=".MasterMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

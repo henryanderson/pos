@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_expandable_header_root"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#F0EBEA"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/qrid"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        tools:text="1234567890123"/>
+
+    <TextView
+        android:id="@+id/stok"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/qrid"
+        tools:text="(10)"/>
+
+    <TextView
+        android:id="@+id/harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        tools:text="IDR 70.000"/>
+
+    <TextView
+        android:id="@+id/barang"
+        android:layout_width="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qrid"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        tools:text="vocer kartu"/>
+
+</RelativeLayout>

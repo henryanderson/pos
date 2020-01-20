@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".master_barang.BarangAdd">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            android:textColor="#808080"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/btnsimpan">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+     <TextView
+        android:id="@+id/jkodebarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Kode Barang"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/qrid"
+        android:layout_below="@+id/jkodebarang"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/btnscan"
+        android:inputType="number"
+        android:layout_height="wrap_content"></EditText>
+
+    <Button
+        android:id="@+id/btnscan"
+        android:layout_below="@+id/jkodebarang"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:layout_alignParentRight="true"></Button>
+
+
+    <TextView
+        android:id="@+id/jbarang"
+        android:layout_below="@+id/qrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Barang"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/barang"
+        android:layout_below="@+id/jbarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+
+
+
+    <TextView
+        android:id="@+id/jkategori"
+        android:layout_below="@+id/barang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategori"
+        android:textSize="17dp">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/kategori"
+        android:layout_below="@+id/jkategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="17dp">
+    </Spinner>
+
+
+
+
+
+    <TextView
+        android:id="@+id/jharga"
+        android:layout_below="@+id/kategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harga Jual (Normal)"
+        android:textSize="17dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/jidr"
+        android:layout_below="@+id/jharga"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="IDR"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/harga_jual"
+        android:layout_below="@+id/jharga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_toRightOf="@+id/jidr">
+    </EditText>
+
+
+
+    <TextView
+        android:id="@+id/jpromo"
+        android:layout_below="@+id/harga_jual"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Promo"
+        android:textSize="17dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btninfopromo"
+        android:layout_below="@+id/harga_jual"
+        android:layout_width="77dp"
+        android:layout_height="40dp"
+        android:text="bantuan"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@+id/jpromo">
+    </Button>
+
+    <TextView
+        android:id="@+id/jidrpromo"
+        android:layout_below="@+id/jpromo"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="IDR"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/promo"
+        android:layout_below="@+id/jpromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:layout_toRightOf="@+id/jidr">
+    </EditText>
+
+
+
+
+    <TextView
+        android:id="@+id/jhargagrosir"
+        android:layout_below="@+id/promo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Harga Grosir"
+        android:textSize="17dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/jidrhg"
+        android:layout_below="@+id/jhargagrosir"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="IDR"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/harga_grosir"
+        android:layout_below="@+id/jhargagrosir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_toRightOf="@+id/jidr">
+    </EditText>
+
+    <TextView
+        android:id="@+id/jhargagrosirpromo"
+        android:layout_below="@+id/harga_grosir"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Harga Grosir Promo"
+        android:textSize="17dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/jidrhgp"
+        android:layout_below="@+id/jhargagrosirpromo"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="IDR"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/harga_grosir_promo"
+        android:layout_below="@+id/jhargagrosirpromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_toRightOf="@+id/jidr">
+    </EditText>
+
+
+
+    <TextView
+        android:id="@+id/jharga_beli"
+        android:layout_below="@+id/harga_grosir_promo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Harga Beli"
+        android:textSize="17dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btninfohb"
+        android:layout_below="@+id/harga_grosir_promo"
+        android:layout_width="77dp"
+        android:layout_height="40dp"
+        android:text="bantuan"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@+id/jharga_beli">
+    </Button>
+
+    <EditText
+        android:id="@+id/harga_beli"
+        android:layout_below="@+id/jharga_beli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+    </EditText>
+
+
+
+    <TextView
+        android:id="@+id/jstok"
+        android:layout_below="@+id/harga_beli"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Stok Akhir"
+        android:textSize="17dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btninfostok"
+        android:layout_below="@+id/harga_beli"
+        android:layout_width="77dp"
+        android:layout_height="40dp"
+        android:text="bantuan"
+        android:textAllCaps="false"
+        android:layout_toRightOf="@+id/jstok">
+    </Button>
+
+    <EditText
+        android:id="@+id/stok"
+        android:layout_below="@+id/jstok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disable">
+    </EditText>
+
+
+
+    <TextView
+        android:id="@+id/jsatuan"
+        android:layout_below="@+id/stok"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Satuan"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/satuan"
+        android:layout_below="@+id/jsatuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+
+    <TextView
+        android:id="@+id/jtax"
+        android:layout_below="@+id/satuan"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Tax (% persen)"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/tax"
+        android:layout_below="@+id/jtax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0">
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/nonstok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Barang Non Stok"
+        android:layout_below="@+id/tax"></CheckBox>
+
+    <TextView
+        android:id="@+id/jcatatan"
+        android:layout_below="@+id/nonstok"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Catatan"
+        android:textSize="17dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/catatan"
+        android:layout_below="@+id/jcatatan"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:inputType="text|textMultiLine"
+        android:hint="Optional"></EditText>
+
+</RelativeLayout>
+</ScrollView>
+
+    <Button
+        android:id="@+id/btnsimpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Simpan">
+    </Button>
+
+</RelativeLayout>

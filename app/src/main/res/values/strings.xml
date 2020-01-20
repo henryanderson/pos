@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">iPos</string>
+
+    <string-array name="menu">
+
+        <item name="menu">Data Kategori Barang</item>
+        <item name="menu">Data Barang</item>
+
+    </string-array>
+
+</resources>
